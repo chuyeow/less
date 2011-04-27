@@ -23,13 +23,7 @@ module Treetop
 end
 
 class Object
-  def verbose
-    $verbose = true
-    yield
-  ensure
-    $verbose = false
-  end
-  
+
   def tap
     yield self
     self
